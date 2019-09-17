@@ -1,0 +1,14 @@
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_EXECUTABLES)
+LOCAL_SRC_FILES:= \
+	v4l2.c
+
+LOCAL_MODULE:= v4l2demo
+
+LOCAL_SHARED_LIBRARIES := \
+	libcutils \
+	liblog
+
+include $(BUILD_EXECUTABLE)
